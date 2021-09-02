@@ -1,0 +1,134 @@
+/*este archivo modifica la seccion que muestra los tamaños de fotolibros de forma visual en el index
+ver _mediaqueries.scss para el responsive */
+//Variables//
+$colorfotolibros: rgb(211, 205, 152);
+$colorfondo:rgba(128, 128, 128, 0.25);
+
+/* Divs */
+  /*Generales*/
+  .chicos {
+    background-color: $colorfondo;
+  }
+  .medianos {
+    background-color:($colorfondo)-50;
+  }
+  .grandes {
+    background-color: ($colorfondo)-100;
+  }
+  .gigantes {
+    background-color: ($colorfondo)-150;
+  }
+  .formas {
+    margin: 0px 50px 0px 50px;
+    display: flex;
+    flex-direction:column;
+  }
+/* Apaisados */
+#a10x30 {
+  width: (44px/2);
+  height: (31px/2);
+}
+#a20x60 {
+  width: (88.5px/2);
+  height: (59.5px/2);
+}
+#a25x60 {
+  width: (89px/2);
+  height: (74px/2);
+}
+#a25x75 {
+  width: (111px/2);
+  height: (73.5px/2);
+}
+#a30x70 {
+  width: (103.5px/2);
+  height: (88.5px/2);
+}
+#a30x80 {
+  width: (118px/2);
+  height: (88.5px/2);
+}
+#a30x90 {
+  width: (133px/2);
+  height: (88.5px/2);
+}
+#a45x110 {
+  width: (162.5px/2);
+  height: (133px/2);
+}
+/*Verticales*/
+#a15x20 {
+  width: (64px/2);
+  height: (98px/2);
+}
+#a20x30 {
+  width: (97px/2);
+  height: (128px/2);
+}
+#a30x40 {
+  width: (128px/2);
+  height: (194px/2);
+}
+#a30x45 {
+  width: (145px/2);
+  height: (194px/2);
+}
+#a30x50 {
+  width: (161px/2);
+  height: (194px/2);
+}
+#a40x60 {
+  width: (192px/2);
+  height: (257px/2);
+}
+#a45x80{
+  width: (257px/2);
+  height: (290px/2);
+}
+
+/* Texto */
+
+.contenedorForma p {
+  color: white;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+/* Grid */
+.uno {
+  grid-area: uno;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $colorfotolibros;
+  justify-self: center;
+  margin-top: 10px;
+}
+.dos {
+  grid-area: dos;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $colorfotolibros;
+  margin-top: 10px;
+}
+.tres {
+  grid-area: tres;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $colorfotolibros;
+  margin-top: 10px;
+}
+.textoBajo {
+  grid-area: textoBajo;
+}
+
+.contenedorForma__gridArea {
+  display: grid;
+  grid-template-areas:
+    "uno dos tres"
+    "textoBajo textoBajo textoBajo";
+  grid-column-gap: 5px;
+  margin: 10px 0px 10px 0px;
+}

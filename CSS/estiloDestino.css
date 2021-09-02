@@ -1,0 +1,477 @@
+@charset "UTF-8";
+/*Roots*/
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@200;400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  border: none; }
+
+html {
+  font-size: 20px;
+  font-family: "MULISH"; }
+
+/*Fuentes*/
+/* Grid */
+.contenedorGrid {
+  margin: 0px 5% 0px 5%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 220px;
+  grid-column-gap: 5px; }
+
+/* Texto */
+.contenedorGrid p {
+  color: white;
+  margin-bottom: 10px;
+  font-size: 15px; }
+
+/*Menu*/
+.navBruno {
+  z-index: 20;
+  background-color: #deb887;
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  display: flex;
+  align-items: center; }
+  .navBruno span {
+    color: white;
+    margin-left: 10px; }
+  .navBruno a {
+    color: white;
+    text-decoration: none;
+    margin-left: 10px; }
+  .navBruno .activo {
+    color: black; }
+
+ul {
+  list-style: none;
+  font-size: 0;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 20px;
+  margin-bottom: 0px; }
+  ul ul {
+    position: absolute;
+    display: none;
+    background-color: burlywood;
+    width: 100px;
+    margin-bottom: 0px; }
+    ul ul li {
+      display: block; }
+  ul li:hover ul {
+    display: block; }
+
+li {
+  display: inline-block;
+  position: relative;
+  font-size: 20px;
+  margin: 10px 5px 10px 5px; }
+
+/* Titulos */
+h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  text-align: center; }
+
+#inicio h1 {
+  color: white;
+  margin-bottom: 40px; }
+
+h2 {
+  font-size: 2rem; }
+
+#detalles h2 {
+  color: white;
+  text-align: center; }
+
+/* separadores */
+.separador {
+  margin-top: 60px; }
+
+/* Parrafos */
+p {
+  color: gray;
+  font-weight: lighter;
+  font-size: 1rem;
+  text-align: center; }
+
+#inicio p {
+  color: white;
+  font-size: 1.5rem; }
+
+.parrafosCursiva {
+  padding: 0px 20%; }
+
+.divDetalles h3 {
+  color: white;
+  text-align: center; }
+
+.textoCursiva {
+  font-style: oblique; }
+
+.footerText {
+  padding-right: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; }
+
+#detalles p {
+  color: white; }
+
+/*Fondos y DIVS*/
+#inicio {
+  background-image: url("/Assets/media/img/indexBackground.JPG");
+  background-size: 100%;
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+
+#detalles {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: linear-gradient(318deg, #22c3aa 27%, #9c8568 72%);
+  height: 500px; }
+
+#detalles .row {
+  margin: 0px !important; }
+
+.col-lg-4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+#footerFondo {
+  background-color: burlywood;
+  box-shadow: 0px -8px 8px -7px rgba(0, 0, 0, 0.62);
+  width: 100%;
+  position: sticky;
+  bottom: 0px;
+  margin-top: 50px; }
+
+/* Imagenes */
+.imagenes {
+  width: 30%;
+  margin: 5px;
+  object-fit: cover; }
+
+.bd-placeholder-img {
+  object-fit: cover; }
+
+.imagenesFlex {
+  margin: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+
+#logo {
+  width: 90px;
+  margin: 5px;
+  margin-left: 50px; }
+
+.rounded-circle {
+  width: 140px;
+  height: 140px; }
+
+/*Botones*/
+.boton {
+  text-decoration: none;
+  border-radius: 10px;
+  margin: 45px 40px;
+  padding: 10px; }
+
+#botonVacio {
+  border: 2px solid #ddc53e; }
+
+#botonLleno {
+  background-color: #ddc53e; }
+
+.calcular {
+  background-color: #76b9b9; }
+
+.botones {
+  display: flex;
+  justify-content: center; }
+
+/* Transiciones  */
+.imagenes {
+  transition: width 2s; }
+
+.imagenes:hover {
+  width: 35%; }
+
+#botonLleno {
+  transition: 2s; }
+
+#botonLleno:hover {
+  background-color: #1ccfb1; }
+
+#botonVacio {
+  transition: 2s; }
+
+#botonVacio:hover {
+  border: 2px solid #1ccfb1; }
+
+.divDetalles {
+  transition: 2s; }
+
+.divDetalles:hover {
+  width: 500px;
+  height: 500px; }
+
+.text-focus-in {
+  animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  size: 90p; }
+
+@keyframes text-focus-in {
+  0% {
+    filter: blur(12px);
+    opacity: 0; }
+  100% {
+    filter: blur(0px);
+    opacity: 1; } }
+
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none; }
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem; } }
+
+#toTheBack {
+  z-index: 0; }
+
+/* Carrusel */
+/* CUSTOMIZE THE CAROUSEL
+  -------------------------------------------------- */
+/* Carousel base class */
+.carousel {
+  margin-bottom: 4rem; }
+
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  bottom: 3rem;
+  /* z-index: 10; */ }
+  .carousel-caption p {
+    color: white; }
+
+/* Declare heights because of positioning of img element */
+.carousel-item {
+  height: 32rem; }
+
+.carousel-item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 32rem; }
+
+#myCarousel {
+  margin-bottom: 10px; }
+
+/* MARKETING CONTENT
+  -------------------------------------------------- */
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+  margin-bottom: 1.5rem;
+  text-align: center; }
+
+.marketing h2 {
+  font-weight: 400; }
+
+/* rtl:begin:ignore */
+.marketing .col-lg-4 p {
+  margin-right: 0.75rem;
+  margin-left: 0.75rem; }
+
+/* rtl:end:ignore */
+/* Featurettes
+  ------------------------- */
+.featurette-divider {
+  margin: 5rem 0;
+  /* Space out the Bootstrap <hr> more */ }
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  /* rtl:remove */
+  letter-spacing: -0.05rem; }
+
+/* RESPONSIVE CSS
+  -------------------------------------------------- */
+@media (min-width: 40em) {
+  /* Bump up size of carousel content */
+  .carousel-caption p {
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+    line-height: 1.4; }
+  .featurette-heading {
+    font-size: 50px; } }
+
+@media (min-width: 62em) {
+  .featurette-heading {
+    margin-top: 7rem; } }
+
+/*este archivo modifica la seccion que muestra los tamaños de fotolibros de forma visual en el index
+ver _mediaqueries.scss para el responsive */
+/* Divs */
+/*Generales*/
+.chicos {
+  background-color: rgba(128, 128, 128, 0.25); }
+
+.medianos {
+  background-color: rgba(78, 78, 78, 0.25); }
+
+.grandes {
+  background-color: rgba(28, 28, 28, 0.25); }
+
+.gigantes {
+  background-color: rgba(0, 0, 0, 0.25); }
+
+.formas {
+  margin: 0px 50px 0px 50px;
+  display: flex;
+  flex-direction: column; }
+
+/* Apaisados */
+#a10x30 {
+  width: 22px;
+  height: 15.5px; }
+
+#a20x60 {
+  width: 44.25px;
+  height: 29.75px; }
+
+#a25x60 {
+  width: 44.5px;
+  height: 37px; }
+
+#a25x75 {
+  width: 55.5px;
+  height: 36.75px; }
+
+#a30x70 {
+  width: 51.75px;
+  height: 44.25px; }
+
+#a30x80 {
+  width: 59px;
+  height: 44.25px; }
+
+#a30x90 {
+  width: 66.5px;
+  height: 44.25px; }
+
+#a45x110 {
+  width: 81.25px;
+  height: 66.5px; }
+
+/*Verticales*/
+#a15x20 {
+  width: 32px;
+  height: 49px; }
+
+#a20x30 {
+  width: 48.5px;
+  height: 64px; }
+
+#a30x40 {
+  width: 64px;
+  height: 97px; }
+
+#a30x45 {
+  width: 72.5px;
+  height: 97px; }
+
+#a30x50 {
+  width: 80.5px;
+  height: 97px; }
+
+#a40x60 {
+  width: 96px;
+  height: 128.5px; }
+
+#a45x80 {
+  width: 128.5px;
+  height: 145px; }
+
+/* Texto */
+.contenedorForma p {
+  color: white;
+  margin-bottom: 10px;
+  font-size: 15px; }
+
+/* Grid */
+.uno {
+  grid-area: uno;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d3cd98;
+  justify-self: center;
+  margin-top: 10px; }
+
+.dos {
+  grid-area: dos;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d3cd98;
+  margin-top: 10px; }
+
+.tres {
+  grid-area: tres;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d3cd98;
+  margin-top: 10px; }
+
+.textoBajo {
+  grid-area: textoBajo; }
+
+.contenedorForma__gridArea {
+  display: grid;
+  grid-template-areas: "uno dos tres" "textoBajo textoBajo textoBajo";
+  grid-column-gap: 5px;
+  margin: 10px 0px 10px 0px; }
+
+/* Estilo para movil */
+@media only screen and (max-width: 400px) {
+  #logo {
+    display: none; }
+  ul {
+    justify-content: center; } }
+
+/* Estilo para tablet */
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+  #detalles {
+    display: flex;
+    /* width: 100%; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 850px; }
+  #logo {
+    display: none; } }
+
+@media only screen and (min-width: 961px) {
+  .contenedorForma {
+    margin: 0px 5% 0px 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 220px;
+    grid-column-gap: 5px; } }

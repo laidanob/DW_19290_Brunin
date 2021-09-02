@@ -1,0 +1,278 @@
+/*Roots*/
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+html {
+  font-size: 20px;
+  font-family: "MULISH";
+}
+/*Fuentes*/
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@200;400&display=swap");
+
+/* Grid */
+.contenedorGrid {
+  margin: 0px 5% 0px 5%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 220px;
+  grid-column-gap: 5px;
+}
+
+/* Texto */
+
+.contenedorGrid p {
+  color: white;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+/*Menu*/
+
+.navBruno {
+  z-index: 20;
+  background-color: #deb887;
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  display: flex;
+  align-items: center;
+  span {
+    color: white;
+    margin-left: 10px;
+  }
+  a {
+    color: white;
+    text-decoration: none;
+    margin-left: 10px;
+  }
+  .activo {
+    color: black;
+  }
+}
+
+ul {
+  list-style: none;
+  font-size: 0 /* truco por el uso de inline-block*/;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 20px;
+  margin-bottom: 0px;
+  ul {
+    position: absolute;
+    display: none;
+    background-color: burlywood;
+    width: 100px;
+    margin-bottom: 0px;
+    li {
+      display: block;
+    }
+   }
+   li:hover ul {
+    display: block;
+  } 
+}
+
+li {
+  display: inline-block;
+  position: relative;
+  font-size: 20px;
+  margin: 10px 5px 10px 5px;
+}
+
+
+/* Titulos */
+
+h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+#inicio h1 {
+  color: white;
+  margin-bottom: 40px;
+}
+h2 {
+  font-size: 2rem;
+}
+#detalles h2 {
+  color: white;
+  text-align: center;
+}
+
+/* separadores */
+.separador {
+  margin-top: 60px;
+}
+
+/* Parrafos */
+p {
+  color: gray;
+  font-weight: lighter;
+  font-size: 1rem;
+  text-align: center;
+}
+#inicio p {
+  color: white;
+  font-size: 1.5rem;
+}
+.parrafosCursiva {
+  padding: 0px 20%;
+}
+.divDetalles h3 {
+  color: white;
+  text-align: center;
+}
+
+.textoCursiva {
+  font-style: oblique;
+}
+
+.footerText {
+  padding-right: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+#detalles p {
+  color: white;
+}
+
+/*Fondos y DIVS*/
+
+#inicio {
+  background-image: url("/Assets/media/img/indexBackground.JPG");
+  background-size: 100%;
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#detalles {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: linear-gradient(
+    318deg,
+    rgba(34, 195, 170, 1) 27%,
+    rgba(156, 133, 104, 1) 72%
+  );
+  height: 500px;
+}
+#detalles {
+  .row{
+    margin: 0px !important;
+  }
+}
+.col-lg-4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#footerFondo {
+  background-color: burlywood;
+  box-shadow: 0px -8px 8px -7px rgba(0, 0, 0, 0.62);
+  width: 100%;
+  position: sticky;
+  bottom: 0px;
+  margin-top: 50px;
+}
+/* Imagenes */
+
+.imagenes {
+  width: 30%;
+  margin: 5px;
+  object-fit: cover;
+}
+.bd-placeholder-img {
+  object-fit: cover;
+}
+.imagenesFlex {
+  margin: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#logo {
+  width: 90px;
+  margin: 5px;
+  margin-left: 50px;
+}
+.rounded-circle {
+  width: 140px;
+  height: 140px;
+}
+/*Botones*/
+
+.boton {
+  text-decoration: none;
+  border-radius: 10px;
+  margin: 45px 40px;
+  padding: 10px;
+}
+
+#botonVacio {
+  border: 2px solid rgb(221, 197, 62);
+}
+
+#botonLleno {
+  background-color: rgb(221, 197, 62);
+}
+
+.calcular {
+  background-color: rgb(118, 185, 185);
+}
+
+.botones {
+  display: flex;
+  justify-content: center;
+}
+
+/* Transiciones  */
+
+.imagenes {
+  transition: width 2s;
+}
+.imagenes:hover {
+  width: 35%;
+}
+#botonLleno {
+  transition: 2s;
+}
+#botonLleno:hover {
+  background-color: rgb(28, 207, 177);
+}
+#botonVacio {
+  transition: 2s;
+}
+#botonVacio:hover {
+  border: 2px solid rgb(28, 207, 177);
+}
+.divDetalles {
+  transition: 2s;
+}
+.divDetalles:hover {
+  width: 500px;
+  height: 500px;
+}
+
+.text-focus-in {
+  animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  size: 90p;
+}
+
+@keyframes text-focus-in {
+  0% {
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    filter: blur(0px);
+    opacity: 1;
+  }
+}

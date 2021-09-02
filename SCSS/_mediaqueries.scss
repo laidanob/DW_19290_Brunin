@@ -1,0 +1,36 @@
+/* Estilo para movil */
+@media only screen and (max-width: 400px) {
+  #logo {
+    display: none;
+  }
+  ul {
+    justify-content: center;
+  }
+ 
+}
+
+/* Estilo para tablet */
+@media only screen and (min-width: 401px) and(max-width:960px) {
+  #detalles {
+    display: flex;
+    /* width: 100%; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 850px;
+  }
+  #logo {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 961px) {
+  .contenedorForma {
+    margin: 0px 5% 0px 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 220px;
+    grid-column-gap: 5px;
+  }
+}
