@@ -19,9 +19,10 @@ $colorfondo:rgba(128, 128, 128, 0.25);
     background-color: ($colorfondo)-150;
   }
   .formas {
-    margin: 0px 50px 0px 50px;
+    margin: 30px 50px 0px 50px;
     display: flex;
     flex-direction:column;
+
   }
 /* Apaisados */
 #a10x30 {
@@ -56,7 +57,7 @@ $colorfondo:rgba(128, 128, 128, 0.25);
   width: (162.5px/2);
   height: (133px/2);
 }
-/*Verticales*/
+/*Horizontales*/
 #a15x20 {
   width: (64px/2);
   height: (98px/2);
