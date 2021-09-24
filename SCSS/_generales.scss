@@ -173,7 +173,10 @@ p {
     margin: 0px !important;
   }
 }
-
+#contacto {
+  display: flex;
+  justify-content: center;
+}
 .medidas {
   margin-top: 60px;
 }
